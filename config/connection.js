@@ -1,8 +1,20 @@
 const { Sequelize } = require('sequelize');
+const { database, username, password, host } = require('./configVariables');
 
-const sequelize = new Sequelize('business','postgres','postgres', {
-    host: 'localhost',
+// const sequelize = new Sequelize('business','postgres','postgres', {
+//     host: 'localhost',
+//     dialect: 'postgres',
+//     logging: false
+// })
+
+console.log(database,username,password,host);
+
+const sequelize = new Sequelize(database,username,password, {
+    host: host,
     dialect: 'postgres',
+    dialectOptions: {
+        ssl: true
+    },
     logging: false
 })
 
