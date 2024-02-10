@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 testConnection();
-seedDatabase();
+// seedDatabase();
 
 app.use('/shipping',shipRouter);
 app.use('/user', userRouter);

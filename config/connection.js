@@ -7,8 +7,6 @@ const { database, username, password, host } = require('./configVariables');
 //     logging: false
 // })
 
-console.log(database,username,password,host);
-
 const sequelize = new Sequelize(database,username,password, {
     host: host,
     dialect: 'postgres',
